@@ -6,6 +6,19 @@
   font-size: 1.5rem;
 }
 
+body {
+  background-color: #f5f5f5;
+}
+
+#login-form {
+  border: solid 1px black; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
 button {
   background-color: green;
   color: white;
@@ -17,6 +30,18 @@ button {
   margin: 1rem;
 }
 
-form {
-  color: green;
+button:hover {
+  background-color: darkgreen;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+input:focus {
+  outline: none;
 }

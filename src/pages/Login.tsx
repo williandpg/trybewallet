@@ -10,7 +10,7 @@ function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const valid = () => {
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const validEmail = emailRegex.test(userEmail);
     const validPassword = userPassword.length >= 6;
     return validEmail && validPassword;
@@ -25,32 +25,30 @@ function Login() {
     <>
       <div>Login</div>
       <form
+        id="login-form"
         onSubmit={ (event) => handleLogin(event) }
       >
-        <div>
-          <label htmlFor="email">
-            <input
-              type="email"
-              data-testid="email-input"
-              value={ userEmail }
-              onChange={ (event) => setUserEmail(event.target.value) }
-              placeholder="E-Mail"
-            />
-          </label>
-        </div>
-        <div>
-          <label htmlFor="password">
-            <input
-              type="password"
-              data-testid="password-input"
-              value={ userPassword }
-              onChange={ (event) => setUserPassword(event.target.value) }
-              placeholder="Senha"
-            />
-          </label>
-        </div>
+        <label htmlFor="email">
+          <input
+            type="email"
+            data-testid="email-input"
+            value={ userEmail }
+            onChange={ (event) => setUserEmail(event.target.value) }
+            placeholder="E-Mail"
+          />
+        </label>
+        <label htmlFor="password">
+          <input
+            type="password"
+            data-testid="password-input"
+            value={ userPassword }
+            onChange={ (event) => setUserPassword(event.target.value) }
+            placeholder="Senha"
+          />
+        </label>
         <button
           type="submit"
+          id="submit-button"
           disabled={ !valid() }
         >
           Entrar
