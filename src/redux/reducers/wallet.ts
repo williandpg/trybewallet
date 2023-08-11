@@ -27,6 +27,11 @@ const wallet = (state = INITIAL_STATE, action: AnyAction) => {
         ...state,
         expenses: [...state.expenses, action.payload],
       };
+    case 'DEL_EXPENSE':
+      return {
+        ...state,
+        expenses: state.expenses.filter((e: any) => e.id !== action.payload.id),
+      };
     default:
       return state;
   }

@@ -1,9 +1,14 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Expenses, WalletState } from '../types';
+import { delExpenseAction } from '../redux/actions';
 
 function Table() {
   const { expenses } = useSelector((state:WalletState) => state.wallet);
+  const dispatch = useDispatch();
+  const delExpense = (id:number) => {
+    dispatch(delExpenseAction(id));
+  };
   return (
     <table>
       <thead>
@@ -33,6 +38,15 @@ function Table() {
                 * expense.value).toFixed(2)}
             </td>
             <td>Real</td>
+            <td>
+              <button
+                type="button"
+                data-testid="delete-btn"
+                onClick={ () => delExpense(expense.id) }
+              >
+                Excluir
+              </button>
+            </td>
           </tr>
         ))}
       </tbody>

@@ -1,5 +1,4 @@
 // Coloque aqui suas actions
-import React from 'react';
 import { AnyAction } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
 import { Expenses, ReduxState } from '../../types';
@@ -48,5 +47,12 @@ export const addExpense = (expense: Expenses) => {
     } catch (error) {
       console.log(error);
     }
+  };
+};
+
+export const delExpenseAction = (idExpense: number) => {
+  return {
+    type: 'DEL_EXPENSE',
+    payload: { id: idExpense },
   };
 };
