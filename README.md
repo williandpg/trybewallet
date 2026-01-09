@@ -55,17 +55,20 @@
 <p align="justify">A estrutura do projeto é organizada da seguinte forma:</p>
 <pre><code>/
 ├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── redux/
-│   │   ├── actions/
-│   │   ├── reducers/
-│   │   └── store/
-│   ├── services/ (ex.: integração com API de câmbio)
-│   ├── tests/
-│   └── App.js (ou App.jsx)
-├── public/
-└── README.html
+│   ├── components/     # Componentes reutilizáveis
+│   ├── images/         # Imagens do projeto
+│   ├── pages/          # Páginas principais
+│   ├── redux/          # Configuração do Redux
+│   ├── services/       # Serviços de API
+│   ├── tests/          # Testes da aplicação
+│   ├── main.tsx
+│   ├── App.css
+│   └── App.tsx
+├── vite.config.ts
+├── index.html
+├── package.json
+├── package-lock.json
+└── README.md
 </code></pre>
 
 <h2><strong>Contato</strong></h2>
@@ -141,19 +144,22 @@
   <h2><strong>Project Structure</strong></h2>
   <p align="justify">The project structure is organized as follows:</p>
   <pre><code>/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── redux/
-│   │   ├── actions/
-│   │   ├── reducers/
-│   │   └── store/
-│   ├── services/
-│   ├── tests/
-│   └── App.js (or App.jsx)
-├── public/
-└── README.html
-</code></pre>
+  ├── src/
+  │   ├── components/     # Reusable components
+  │   ├── images/         # Project images
+  │   ├── pages/          # Main pages
+  │   ├── redux/          # Redux setup
+  │   ├── services/       # API services
+  │   ├── tests/          # Application tests
+  │   ├── main.tsx
+  │   ├── App.css
+  │   └── App.tsx
+  ├── vite.config.ts
+  ├── index.html
+  ├── package.json
+  ├── package-lock.json
+  └── README.md
+  </code></pre>
 
   <h2><strong>Contact</strong></h2>
   <p>
